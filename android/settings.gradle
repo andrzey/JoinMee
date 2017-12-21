@@ -1,0 +1,3 @@
+rootProject.name = 'joinmee'
+
+include ':app'
