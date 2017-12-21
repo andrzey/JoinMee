@@ -1,4 +1,3 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import StartApp from './src/app';
 
-AppRegistry.registerComponent('joinmee', () => App);
+StartApp();

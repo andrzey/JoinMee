@@ -14,8 +14,7 @@
     ],
     "types": [
         "react",
-        "react-native",
-        "jest"
+        "react-native"
     ],
     "exclude": [
         "android",
