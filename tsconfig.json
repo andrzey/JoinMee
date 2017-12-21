@@ -5,7 +5,7 @@
         "jsx": "react",
         "outDir": "build",
         "rootDir": "./",
-        "sourceMap": true,
+        "sourceMap": true
     },
     "filesGlob": [
         "typings/index.d.ts",
