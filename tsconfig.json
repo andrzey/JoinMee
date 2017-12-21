@@ -1,19 +1,11 @@
 {
     "compilerOptions": {
         "target": "es2015",
-        "module": "es2015",
-        "moduleResolution": "node",
+        "module": "commonjs",
         "jsx": "react",
-        "outDir": "artifacts",
-        "rootDir": "src",
-        "allowSyntheticDefaultImports": true,
-        "noImplicitAny": false,
-        "preserveConstEnums": true,
-        "allowJs": false,
+        "outDir": "build",
+        "rootDir": "./",
         "sourceMap": true,
-        "noImplicitReturns": true,
-        "noUnusedParameters": true,
-        "noUnusedLocals": true
     },
     "filesGlob": [
         "typings/index.d.ts",
@@ -30,6 +22,5 @@
         "ios",
         "build",
         "node_modules"
-    ],
-    "compileOnSave": false
+    ]
 }

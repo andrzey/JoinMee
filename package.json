@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios",
-    "test": "jest"
+    "tsc": "tsc",
+    "clean": "rimraf build",
+    "build": "npm run clean && npm run tsc --"
   },
   "dependencies": {
     "react": "16.0.0",
