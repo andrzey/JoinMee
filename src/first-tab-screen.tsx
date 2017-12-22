@@ -1,16 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import * as React from 'react';
 import {
     Platform,
     StyleSheet,
     Text,
+    TouchableHighlight,
     View,
 } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as userActions from './user/user.actions';
 
 const instructions = Platform.select({
     android: 'Double tap R on your keyboard to reload,\n' +
@@ -19,7 +18,7 @@ const instructions = Platform.select({
         'Cmd+D or shake for dev menu',
 });
 
-export default class FirstTabScreen extends React.Component {
+class FirstTabScreen extends React.Component<{ actions: any; }, {}> {
     public render() {
         return (
             <View style={styles.container}>
@@ -29,6 +28,9 @@ export default class FirstTabScreen extends React.Component {
                 <Text style={styles.instructions}>
                     To get started, edit App.js
         </Text>
+                <TouchableHighlight onPress={() => { this.props.actions.loginUser('test'); }}>
+                    <Text>Press me!</Text>
+                </TouchableHighlight>
                 <Text style={styles.instructions}>
                     {instructions}
                 </Text>
@@ -55,3 +57,17 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 });
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators(userActions, dispatch),
+    };
+};
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+        user: state.user,
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FirstTabScreen);
