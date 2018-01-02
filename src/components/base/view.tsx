@@ -2,9 +2,10 @@ import * as React from 'react';
 import { StyleSheet, View as RNView } from 'react-native';
 
 interface IViewProps {
-    direction?: 'vertical';
+    border?: boolean;
     center?: boolean;
     margin?: boolean;
+    vertical?: boolean;
 }
 
 export default class View extends React.PureComponent<IViewProps> {
@@ -21,7 +22,12 @@ export default class View extends React.PureComponent<IViewProps> {
 
 const createStyles = (props: IViewProps) => StyleSheet.create({
     view: StyleSheet.flatten([
-        props.direction && {
+        props.border && {
+            borderColor: '#e9e9e9',
+            borderRadius: 5,
+            borderWidth: 1,
+        },
+        props.vertical && {
             flexDirection: 'column',
         },
         props.margin && {
