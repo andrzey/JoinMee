@@ -1,9 +1,7 @@
 import * as React from 'react';
-import {
-    TouchableOpacity,
-} from 'react-native';
-import Text from '../base/text';
-import View from '../base/view';
+import { TouchableOpacity } from 'react-native';
+
+import { Text, View } from '../base/index';
 
 interface IHappeningListItemProps {
     happening: any;

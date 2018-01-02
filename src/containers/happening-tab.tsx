@@ -3,7 +3,6 @@ import { TouchableHighlight } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import View from '../components/base/view';
 import HappeningList from '../components/happening-list/happening-list';
 import * as happeningActions from '../happening/happening.actions';
 
