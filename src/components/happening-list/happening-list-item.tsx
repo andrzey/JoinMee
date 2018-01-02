@@ -15,7 +15,7 @@ export default class HappeningListItem extends React.Component<IHappeningListIte
 
         return (
             <TouchableOpacity>
-                <View direction='vertical'>
+                <View direction='vertical' center>
                     <Text>{name}</Text>
                     <Text>{place}</Text>
                 </View>

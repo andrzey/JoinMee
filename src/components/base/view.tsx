@@ -3,6 +3,7 @@ import { StyleSheet, View as RNView } from 'react-native';
 
 interface IViewProps {
     direction?: 'vertical';
+    center?: boolean;
     margin?: boolean;
 }
 
@@ -25,6 +26,10 @@ const createStyles = (props: IViewProps) => StyleSheet.create({
         },
         props.margin && {
             margin: 5,
+        },
+        props.center && {
+            alignItems: 'center',
+            justifyContent: 'center',
         },
     ]),
 });
