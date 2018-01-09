@@ -9,6 +9,7 @@ export const FontStyle = {
         normal: 17,
         small: 15,
     },
+    fontWeight: '400',
 };
 
 export const Spacing = {
@@ -20,3 +21,5 @@ export const BorderStyles = {
     borderRadius: 5,
     borderWidth: 1,
 };
+
+export const RegularFontWeight = '400';

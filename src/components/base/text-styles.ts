@@ -1,21 +1,21 @@
 import { StyleSheet } from 'react-native';
 
-import { FontStyle } from './base-styles';
+import { FontStyle, RegularFontWeight } from './base-styles';
 
 export default StyleSheet.create({
     large: {
         fontFamily: FontStyle.fontFamily,
         fontSize: FontStyle.fontSize.large,
-        fontWeight: '400',
+        fontWeight: RegularFontWeight,
     },
     normal: {
         fontFamily: FontStyle.fontFamily,
         fontSize: FontStyle.fontSize.normal,
-        fontWeight: '300',
+        fontWeight: RegularFontWeight,
     },
     small: {
         fontFamily: FontStyle.fontFamily,
         fontSize: FontStyle.fontSize.small,
-        fontWeight: '300',
+        fontWeight: RegularFontWeight,
     },
 });
