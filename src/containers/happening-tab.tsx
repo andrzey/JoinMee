@@ -13,7 +13,7 @@ interface IHappeningTabProps {
 
 class HappeningTab extends React.Component<IHappeningTabProps> {
     public componentDidMount() {
-        this.props.actions.fetchHappenings();
+        // this.props.actions.fetchHappenings();
     }
 
     public render() {
