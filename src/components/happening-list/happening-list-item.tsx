@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
-import { Text, View } from '../base/index';
+import TextStyle from '../base/text-styles';
+import ItemStyle from './happening-list-item-styles';
 
 interface IHappeningListItemProps {
     happening: any;
@@ -9,13 +10,17 @@ interface IHappeningListItemProps {
 
 export default class HappeningListItem extends React.Component<IHappeningListItemProps> {
     public render() {
-        const { name, place } = this.props.happening;
+        const { description, name, place, time } = this.props.happening;
 
         return (
             <TouchableOpacity>
-                <View vertical center border>
-                    <Text fontSize={20}>{name}</Text>
-                    <Text fontSize={15}>{place}</Text>
+                <View style={ItemStyle.container}>
+                    <Text style={TextStyle.large}>{name}</Text>
+                    <View style={ItemStyle.infoContainer}>
+                        <Text style={TextStyle.small}>{time}</Text>
+                        <Text style={TextStyle.small}>{place}</Text>
+                    </View>
+                    <Text style={TextStyle.normal}>{description}</Text>
                 </View>
             </TouchableOpacity>
         );
