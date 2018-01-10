@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { BorderStyles, Colors, Spacing } from '../base/base-styles';
+import { BorderStyles, Colors, Spacing } from '../../base/base-styles';
 
 export default StyleSheet.create({
     container: {
@@ -14,5 +14,9 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         width: '100%',
+    },
+    timeAndPlaceContainer: {
+        alignItems: 'center',
+        flexDirection: 'row',
     },
 });

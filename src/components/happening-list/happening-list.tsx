@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FlatList } from 'react-native';
 
-import HappeningListItem from './happening-list-item';
+import HappeningListItem from './happening-list-item/happening-list-item';
 
 interface IHappeningListProps {
     happenings: any[];
