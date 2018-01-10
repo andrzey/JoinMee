@@ -3,25 +3,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const replaceSuffixPattern = /--(active|big|small|very-big)/g;
 const icons = {
-    'ios-person': [30, '#bbb'],
-    'ios-person--big': [50, '#bbb'],
+    'ios-person': [30, '#000'],
+    'ios-person--active': [30, '#000'],
 
-    'ios-person--active': [30, '#fff'],
-    'ios-person--active--big': [50, '#fff'],
-    'ios-person--active--very-big': [100, '#fff'],
-
-    'ios-people': [30, '#bbb'],
-    'ios-people--active': [30, '#fff'],
-
-    'ios-keypad': [30, '#bbb'],
-    'ios-keypad--active': [30, '#fff'],
-
-    'ios-chatbubbles': [30, '#bbb'],
-    'ios-chatbubbles--active': [30, '#fff'],
-
-    // Use other Icon provider, see the logic at L39
-    'facebook': [30, '#bbb', FontAwesome],
-    'facebook--active': [30, '#fff', FontAwesome],
+    'ios-timer-outline': [30, '#bbb'],
 };
 
 const defaultIconProvider = Ionicons;
