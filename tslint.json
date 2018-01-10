@@ -10,7 +10,8 @@
             "single"
         ],
         "no-console": false,
-        "object-literal-sort-keys": true
+        "object-literal-sort-keys": true,
+        "max-line-length": false
     },
     "rulesDirectory": []
 }
