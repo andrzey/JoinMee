@@ -1,4 +1,6 @@
 export const Colors = {
+    black: '#000',
+    blue: '#0076FF',
     borderColor: '#e9e9e9',
 };
 
