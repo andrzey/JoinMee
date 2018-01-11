@@ -13,6 +13,8 @@ export default StyleSheet.create({
     infoContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
+        marginBottom: Spacing.margin,
+        marginTop: Spacing.margin,
         width: '100%',
     },
     timeAndPlaceContainer: {

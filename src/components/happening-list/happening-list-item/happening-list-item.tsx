@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
 import TextStyle from '../../base/text-styles';
+import Attendees from './attendees/attendees';
 import ItemStyle from './happening-list-item-styles';
 import TimeAndPlace from './time-and-place';
 
@@ -19,6 +20,7 @@ export default class HappeningListItem extends React.Component<IHappeningListIte
                     <Text style={TextStyle.large}>{name}</Text>
                     <TimeAndPlace time={time} place={place} />
                     <Text style={TextStyle.normal}>{description}</Text>
+                    <Attendees />
                 </View>
             </TouchableOpacity>
         );

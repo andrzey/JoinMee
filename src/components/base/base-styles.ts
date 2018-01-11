@@ -2,6 +2,8 @@ export const Colors = {
     black: '#000',
     blue: '#0076FF',
     borderColor: '#e9e9e9',
+    lightGrey: '#EFEFF4',
+    white: '#fff',
 };
 
 export const FontStyle = {
@@ -25,3 +27,4 @@ export const BorderStyles = {
 };
 
 export const RegularFontWeight = '400';
+export const BoldFontWeight = '600';
