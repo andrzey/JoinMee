@@ -6,7 +6,6 @@ import { registerScreens, ScreenKeys } from './containers/registerScreens';
 import configureStore from './store/configure-store';
 
 const store = configureStore();
-const state = store.getState();
 
 registerScreens(store, Provider);
 
