@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { Colors, Spacing } from '../../../base/base-styles';
 import { BoldFontWeight, FontStyle } from '../../../base/base-styles';
 
-const size = 40;
+const size = 35;
 
 const borderStyles = {
     borderColor: Colors.white,
@@ -34,7 +34,7 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         ...borderStyles,
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.lightBlue,
         marginLeft: (Spacing.margin / 2),
     },
     overImage: {

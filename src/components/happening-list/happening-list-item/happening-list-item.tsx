@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
+import { IHappening } from '../../../common/happening-definitions';
 import TextStyle from '../../base/text-styles';
 import Attendees from './attendees/attendees';
 import ItemStyle from './happening-list-item-styles';
 import TimeAndPlace from './time-and-place';
 
 interface IHappeningListItemProps {
-    happening: any;
+    happening: IHappening;
 }
 
 export default class HappeningListItem extends React.Component<IHappeningListItemProps> {

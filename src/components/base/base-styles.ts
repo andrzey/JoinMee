@@ -1,9 +1,9 @@
 export const Colors = {
     black: '#000',
     blue: '#0076FF',
-    borderColor: '#e9e9e9',
     darkGrey: '#8E8E93',
     grey: '#CECED2',
+    lightBlue: '#5AC8FA',
     lightGrey: '#EFEFF4',
     white: '#fff',
 };
@@ -23,7 +23,7 @@ export const Spacing = {
 };
 
 export const BorderStyles = {
-    borderColor: Colors.borderColor,
+    borderColor: Colors.lightGrey,
     borderRadius: 5,
     borderWidth: 1,
 };
