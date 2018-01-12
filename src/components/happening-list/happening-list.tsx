@@ -1,13 +1,22 @@
 import * as React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 
 import HappeningListItem from './happening-list-item/happening-list-item';
+import Styles from './happening-list-styles';
 
 interface IHappeningListProps {
     happenings: any[];
 }
 
-export default class HappeningList extends React.Component<IHappeningListProps> {
+export default class HappeningList extends React.Component<IHappeningListProps, any> {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            refreshing: false,
+        };
+    }
+
     public render() {
         const happeningArray = [
             {
@@ -53,7 +62,22 @@ export default class HappeningList extends React.Component<IHappeningListProps> 
                 data={happeningArray}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => <HappeningListItem happening={item} />}
+                ListHeaderComponent={this.renderHeader}
+                onRefresh={this.onRefresh}
+                refreshing={this.state.refreshing}
             />
         );
+    }
+
+    private renderHeader = () => {
+        return <View style={Styles.header} />;
+    }
+
+    private onRefresh = () => {
+        this.setState({ refreshing: true });
+
+        setTimeout(() => {
+            this.setState({ refreshing: false });
+        }, 1000);
     }
 }
