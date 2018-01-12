@@ -5,39 +5,40 @@ import Styles from './attendees-styles';
 import Counter from './counter';
 
 interface IAttendeesProps {
-    attendee?: any[];
+    attendees: any[];
 }
 
 export default class Attendees extends React.PureComponent<IAttendeesProps> {
     public render() {
-
-        const items = this.createSomething(this.createArray());
-        const counterNumber = this.createArray().length - 4;
+        const { attendees } = this.props;
+        const counter = attendees.length;
+        const items = this.createAttendeesArray(counter);
+        const counterNumber = (counter < 5) ? 0 : counter - 4;
 
         return (
             <View style={Styles.container}>
-                <Image style={Styles.image} source={require('../../../../../../assets/profile.jpg')} />
+                <Image style={Styles.creatorImage} source={require('../../../../../../assets/profile.jpg')} />
                 {
                     items.map((item, index) => {
                         return <Image key={index} style={Styles.overImage} source={require('../../../../../../assets/profile.jpg')} />;
                     })
                 }
-                <Counter number={counterNumber} />
+                {
+                    counter > 4 &&
+                    <Counter number={counterNumber} />
+                }
             </View>
         );
     }
 
-    private createSomething = (array) => {
+    private createAttendeesArray = (attendeesCount) => {
         const images = [];
+        const counter = (attendeesCount < 5) ? attendeesCount - 1 : 3;
+        const source = '../../../../../../assets/profile.jpg';
 
-        for (let index = 0; index < 3; index++) {
-            images.push(array[index]);
+        for (let index = 0; index < counter; index++) {
+            images.push(source);
         }
         return images;
-    }
-
-    private createArray = () => {
-        const source = '../../../../../../assets/profile.jpg';
-        return [source, source, source, source, source, source, source];
     }
 }

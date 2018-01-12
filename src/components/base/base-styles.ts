@@ -2,6 +2,8 @@ export const Colors = {
     black: '#000',
     blue: '#0076FF',
     borderColor: '#e9e9e9',
+    darkGrey: '#8E8E93',
+    grey: '#CECED2',
     lightGrey: '#EFEFF4',
     white: '#fff',
 };

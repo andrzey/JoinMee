@@ -12,7 +12,7 @@ interface IHappeningListItemProps {
 
 export default class HappeningListItem extends React.Component<IHappeningListItemProps> {
     public render() {
-        const { description, name, place, time } = this.props.happening;
+        const { attendees, description, name, place, time } = this.props.happening;
 
         return (
             <TouchableOpacity>
@@ -20,7 +20,7 @@ export default class HappeningListItem extends React.Component<IHappeningListIte
                     <Text style={TextStyle.large}>{name}</Text>
                     <TimeAndPlace time={time} place={place} />
                     <Text style={TextStyle.normal}>{description}</Text>
-                    <Attendees />
+                    <Attendees attendees={attendees} />
                 </View>
             </TouchableOpacity>
         );

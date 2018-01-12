@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 import { Colors, Spacing } from '../../../base/base-styles';
 import { BoldFontWeight, FontStyle } from '../../../base/base-styles';
 
-const size = 50;
+const size = 40;
+
 const borderStyles = {
     borderColor: Colors.white,
     borderRadius: size / 2,
@@ -23,20 +24,21 @@ export default StyleSheet.create({
     counterText: {
         color: Colors.white,
         fontFamily: FontStyle.fontFamily,
-        fontSize: FontStyle.fontSize.large,
+        fontSize: FontStyle.fontSize.normal,
         fontWeight: BoldFontWeight,
     },
-    image: {
+    creatorImage: {
         ...borderStyles,
     },
     lastImage: {
         alignItems: 'center',
         justifyContent: 'center',
         ...borderStyles,
-        backgroundColor: Colors.lightGrey,
+        backgroundColor: Colors.grey,
+        marginLeft: (Spacing.margin / 2),
     },
     overImage: {
         ...borderStyles,
-        marginLeft: -(2 * Spacing.margin),
+        marginLeft: (Spacing.margin / 2),
     },
 });

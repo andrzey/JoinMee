@@ -11,6 +11,7 @@ export default class HappeningList extends React.Component<IHappeningListProps> 
     public render() {
         const happeningArray = [
             {
+                attendees: [1, 1, 1, 1, 1, 1],
                 // tslint:disable-next-line:max-line-length
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
                 id: 1,
@@ -19,9 +20,28 @@ export default class HappeningList extends React.Component<IHappeningListProps> 
                 time: 'Mandag 2. januar',
             },
             {
+                attendees: [1, 1, 1, 1, 1],
                 // tslint:disable-next-line:max-line-length
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
                 id: 2,
+                name: 'Dolor purus non enim',
+                place: 'Excepteur sint',
+                time: 'Mandag 2. januar',
+            },
+            {
+                attendees: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                // tslint:disable-next-line:max-line-length
+                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+                id: 3,
+                name: 'Dolor purus non enim',
+                place: 'Excepteur sint',
+                time: 'Mandag 2. januar',
+            },
+            {
+                attendees: [1, 1],
+                // tslint:disable-next-line:max-line-length
+                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+                id: 4,
                 name: 'Dolor purus non enim',
                 place: 'Excepteur sint',
                 time: 'Mandag 2. januar',
