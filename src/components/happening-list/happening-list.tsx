@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { FlatList, View } from 'react-native';
 
+import { ScreenKeys } from '../../containers/registerScreens';
 import HappeningListItem from './happening-list-item/happening-list-item';
 import Styles from './happening-list-styles';
 
 interface IHappeningListProps {
     happenings: any[];
+    navigator: any;
 }
 
 export default class HappeningList extends React.Component<IHappeningListProps, any> {
@@ -61,7 +63,7 @@ export default class HappeningList extends React.Component<IHappeningListProps, 
             <FlatList
                 data={happeningArray}
                 keyExtractor={(item) => item.id}
-                renderItem={({ item }) => <HappeningListItem happening={item} />}
+                renderItem={({ item }) => <HappeningListItem happening={item} navigate={this.navigate} />}
                 ListHeaderComponent={this.renderHeader}
                 onRefresh={this.onRefresh}
                 refreshing={this.state.refreshing}
@@ -79,5 +81,12 @@ export default class HappeningList extends React.Component<IHappeningListProps, 
         setTimeout(() => {
             this.setState({ refreshing: false });
         }, 1000);
+    }
+
+    private navigate = () => {
+        this.props.navigator.push({
+            screen: ScreenKeys.HAPPENING_SCREEN,
+            title: 'Test',
+        });
     }
 }

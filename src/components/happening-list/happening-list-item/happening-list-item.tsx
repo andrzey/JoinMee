@@ -9,6 +9,7 @@ import TimeAndPlace from './time-and-place';
 
 interface IHappeningListItemProps {
     happening: IHappening;
+    navigate: () => void;
 }
 
 export default class HappeningListItem extends React.Component<IHappeningListItemProps> {
@@ -16,7 +17,7 @@ export default class HappeningListItem extends React.Component<IHappeningListIte
         const { attendees, description, name, place, time } = this.props.happening;
 
         return (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={this.navigate}>
                 <View style={ItemStyle.container}>
                     <Text style={TextStyle.large}>{name}</Text>
                     <TimeAndPlace time={time} place={place} />
@@ -25,5 +26,9 @@ export default class HappeningListItem extends React.Component<IHappeningListIte
                 </View>
             </TouchableOpacity>
         );
+    }
+
+    private navigate = () => {
+        this.props.navigate();
     }
 }

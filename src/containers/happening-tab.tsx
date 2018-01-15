@@ -9,6 +9,7 @@ import * as happeningActions from '../happening/happening.actions';
 interface IHappeningTabProps {
     actions: any;
     happenings: any[];
+    navigator: any;
 }
 
 class HappeningTab extends React.Component<IHappeningTabProps> {
@@ -17,8 +18,10 @@ class HappeningTab extends React.Component<IHappeningTabProps> {
     }
 
     public render() {
+        const { navigator } = this.props;
+
         return (
-            <HappeningList happenings={this.props.happenings} />
+            <HappeningList happenings={this.props.happenings} navigator={navigator} />
         );
     }
 }
